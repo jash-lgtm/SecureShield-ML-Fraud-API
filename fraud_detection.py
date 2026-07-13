@@ -1,9 +1,9 @@
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from flask import Flask, request, jsonify
-
+from flask_cors import CORS
 app = Flask(__name__)
-
+CORS(app)
 # --- ૧. મશીન લર્નિંગ મોડલ ટ્રેનિંગ (જે આપણે પહેલા કર્યું તે જ) ---
 data = {
     'AMOUNT': [500.00, 95000.00, 1200.00, 85000.00, 300.00],
